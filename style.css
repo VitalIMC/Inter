@@ -1,188 +1,288 @@
 @import url(https://www.dafont.com/napoli.font);
 
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body { 
-    background-color: #f1f1f1; 
-    color: #000000; 
-}
-
-/* Fade-in */
-@keyframes fade-up {
-    0% {
-        opacity: 0;
-        transform: translateY(30px) scale(0.9);
+    *{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
+
+   
+  
+    body { 
+        background-color: #f1f1f1; 
+        color: #000000; 
+    
     }
-}
+    /* Fade-in */
+    @keyframes fade-up{
+        0%{
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+        }
 
-@keyframes fade-down {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px) scale(0.9);
+        100%{
+            opacity: 1;
+            transform: translateY(0px) scale(1);
+        }
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0px) scale(1);
+
+    @keyframes fade-down{
+        0%{
+            opacity: 0;
+            transform: translateY(-30px) scale(0.9);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0px) scale(1);
+        }
     }
-}
+    /* Cabeçalho */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;  
+        padding: 0;    
+        margin-bottom: 10px;
+        position: relative;
+        color: #fff;
+        
+    }
 
-/* Cabeçalho */
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;    
-    margin-bottom: 10px;
-    position: relative;
-    color: #fff;
-}
+    .header h1{
+        text-align: center;
+        display: block;
+        animation: fade-up 0.5s;
+    }
 
-.header h1 {
-    text-align: center;
-    animation: fade-up 0.5s;
-}
+    .header h1 + h1{
+        margin-top: 0px;
+    }
+    .logo {
+        height: 100px;
+        margin-left: 20px;
+        align-items: center;
+        width: 150px;
+        animation: fade-up 0.5s;
+    }
 
-.logo {
-    height: 100px;
-    margin: 10px auto;
-    align-items: center;
-    width: 150px;
-    animation: fade-up 0.5s;
-}
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        animation: fade-up 0.5s;
+        flex-wrap: wrap;
+    }
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: 700;   
+        border-radius: 20px;
+        transition:0.6s ;
+        padding: 5px 10px;
+       
+    }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: fade-up 0.5s;
-}
+    .nav-links a:hover{
+        background-color:#129da5;
+        
+    }
+    .headerIMG{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        border-radius: 0px 0px 50px 50px;
+        
+    }
+    /* Fim do Cabeçalho */
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;   
-    border-radius: 20px;
-    transition: 0.6s;
-    padding: 5px 10px;
-}
+    /* Parte da Calculadora */
 
-.nav-links a:hover {
-    background-color: #129da5;
-}
+    .calcular{
+        padding: 10px;
+    }
+    .calcular p{
+        font-size: 22px;
+        margin-left: 22vh;
+    }
 
-.headerIMG {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    border-radius: 0px 0px 50px 50px;
-}
+    .calcular h1{
+        margin-right: 95vh;
+    }
 
-/* Parte da Calculadora */
-.calcular {
-    padding: 10px;
-}
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        animation: fade-up 0.5s;
+    }
+    .form{
+        
+        border: 5px solid #000000;
+        border-radius: 20px;
+        padding: 10px;
+        width: 100%;
+        max-width: 180vh;
+        margin-left: 50px;
+        overflow: hidden;
+        animation: fade-up 0.5s;
+    }
 
-.calcular p {
-    font-size: 18px;
-    margin: 10px auto;
-    text-align: center;
-}
 
-.calcular h1 {
-    margin: 0 auto;
-    text-align: center;
-}
+    .peso{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        border: none;
+    
+    }
+    .altura {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        
+    }
+    .sexo{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        
+    }
 
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    animation: fade-up 0.5s;
-}
+    input, select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 400px;
+    }
 
-.form {
-    border: 5px solid #000000;
-    border-radius: 20px;
-    padding: 10px;
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
-    animation: fade-up 0.5s;
-}
+    .btn {
+        background-color: #3c357a;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+    }
+    .delete{
+        background-color: #e1c55c;
+        color: #000000;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+        }
 
-.peso, .altura, .sexo {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
+    .result {
+        margin-top: 20px;
+        text-align: center;
+        background-color:#3c357a;
+        padding: 12px 20px;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 500px;
+        font-size: 25px;
+        color:#fff;
+        margin-left:10px;
+        
+    }
 
-input, select {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
+    .tabela {
+        object-fit: cover;
+        width: 100%;
+        max-width: 100vh;
+        height: 50vh;
+        margin-left: 46vh;
+        margin-bottom: 1vh;
+        border-radius: 10px;
+    }
 
-.btn, .delete {
-    background-color: #3c357a;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
-    margin: 10px 0;
-    width: 100%;
-    max-width: 200px;
-}
+    /* Fim da Parte da Calculadora */
 
-.delete {
-    background-color: #e1c55c;
-    color: #000000;
-}
+    /* Home */
+    .Home{
+        background-color: #f1f1f1;
+    }
+        
+    .Home h1{
+        margin-top: 5vh;
+        color: #3c357a;
+        animation: fade-up 0.5s;
+    }
 
-.result {
-    margin-top: 20px;
-    text-align: center;
-    background-color: #3c357a;
-    padding: 12px 20px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 500px;
-    font-size: 18px;
-    color: #fff;
-    margin: 10px auto;
-}
+    .paragrafo{
+        font-size: 22px;
+        margin-left: 22vh;
+        animation: fade-up 0.5s;
+    }
 
-.tabela, .oq, .pq, .importância {
-    object-fit: cover;
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
-}
+    
+    .porque{
+        padding: 5px;
+    }
 
-/* Rodapé */
-footer {
+    .importancia{
+        padding: 5px;
+    }
+    .oq{
+        object-fit: cover;
+        width: 100%;
+        max-width: 100vh;
+        height: 50vh;
+        margin-left: 46vh;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+        border-radius: 10px;
+        
+    }
+
+    .pq{
+        object-fit: cover;
+        width: 100%;
+        max-width: 100vh;
+        height: 50vh;
+        margin-left: 45vh;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+        border-radius: 10px;
+        
+    }
+
+    .importância{
+        object-fit: cover;
+        width: 100%;
+        max-width: 100vh;
+        height: 50vh;
+        margin-left: 23%;
+        margin-top: 5vh;
+        margin-bottom: 1vh;
+        border-radius: 10px;
+        
+    }
+    /* Fim da Home */
+    /* Rodapé */
+    footer {
     margin-top: 100px;
     background-color: #343a40;
     color: #fff;
@@ -190,41 +290,77 @@ footer {
     text-align: center;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .form {
-        padding: 15px;
-        margin: 10px auto;
-    }
-
-    h1, .calcular p {
-        font-size: 20px;
-    }
-
-    .btn, .delete {
-        font-size: 16px;
-    }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@media (max-width: 480px) {
-    .headerIMG {
-        height: 30vh;
-    }
-
-    .nav-links a {
-        font-size: 16px;
-    }
-
-    h1, .calcular p {
-        font-size: 18px;
-    }
-
-    .btn, .delete {
-        font-size: 14px;
-    }
+.footer-section {
+    flex: 1 1 300px;
+    text-align: left;
 }
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #f8f9fa;
+    text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ced4da;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f8f9fa;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media li a {
+    color: #adb5bd;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-media li a:hover {
+    color: #f8f9fa;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #adb5bd;
+    border-top: 1px solid #495057;
+    padding-top: 10px;
+}
+/Fim do Rodapé/
